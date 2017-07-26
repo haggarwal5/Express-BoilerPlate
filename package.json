@@ -1,0 +1,16 @@
+{
+  "name": "Express-BoilerPlate",
+  "version": "1.0.0",
+  "description": "Express Boilerplate with Handlebars and WebAPI Consumption",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Harsh Aggarwal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
