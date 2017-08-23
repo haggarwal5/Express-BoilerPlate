@@ -4,13 +4,34 @@
   "description": "Express Boilerplate with Handlebars and WebAPI Consumption",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run build && nodemon --ignore webpack.config.js server.js --use_strict",
+    "build": "npm run build:clean && set NODE_ENV=dev && webpack --progress --config webpack.config.js --env dev",
+    "build:clean": "rm -rf ./assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Harsh Aggarwal",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3"
+    "basic-auth-connect": "^1.0.0",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-request-id": "^1.4.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.4",
+    "morgan": "^1.8.2",
+    "serve-favicon": "^2.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "webpack": "^2.5.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "css-loader": "^0.25.0",
+    "sass-loader": "^6.0.3",
+    "node-sass": "^4.5.2",
+    "webpack-manifest-plugin": "^1.1.0",
+    "yargs": "^6.3.0"
   }
 }
